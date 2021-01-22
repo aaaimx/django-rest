@@ -4,12 +4,12 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'DISOFTW',
+  title: 'Django REST Framework',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
   description: description,
-  base: '/repo/',
+  base: '/django-rest/',
 
   /**
    * AntDocs theme for AntDesign for vue
@@ -23,25 +23,11 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#f1502f' }],
+    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     [
       'meta',
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }
-    ],
-    [
-      'meta',
-      {
-        name: 'og:image',
-        content: 'https://www.aaaimx.org/software/logo.png'
-      }
-    ],
-    [
-      'link',
-      {
-        href: 'https://www.aaaimx.org/software/logo.png',
-        rel: 'shortcut icon'
-      }
     ]
   ],
 
@@ -56,11 +42,19 @@ module.exports = {
     logo: 'https://www.aaaimx.org/software/logo.png',
     docsDir: '',
     editLinkText: '',
-    lastUpdated: true,
+    lastUpdated: false,
     nav: [
       {
-        text: 'Comandos',
+        text: 'Intro',
         link: '/intro/'
+      },
+      {
+        text: 'REST Framework',
+        link: '/rest-framework/'
+      },
+      {
+        text: 'Storages',
+        link: '/storages/'
       },
       {
         text: 'Glosario',
@@ -71,6 +65,13 @@ module.exports = {
       '/intro/': [
         {
           title: 'Intro',
+          collapsable: false,
+          children: ['', '2-projects']
+        }
+      ],
+      '/rest-framework/': [
+        {
+          title: 'REST Framework',
           collapsable: false,
           children: ['']
         }

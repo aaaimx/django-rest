@@ -1,64 +1,50 @@
-# Respositorios locales
+# Introducción a Django
 
-## Configuración inicial
+Django es un marco web **Python** de alto nivel que fomenta el desarrollo rápido y un diseño limpio y pragmático. Creado por desarrolladores experimentados, se encarga de gran parte de la molestia del desarrollo web, por lo que puede concentrarse en escribir su aplicación sin necesidad de reinventar la rueda. Es gratis y de **código abierto**.
 
-Configure la información del usuario para todos los repositorios locales
+## Programación Orientada a Objetos (POO)
 
-- Establece el correo electrónico que desea adjuntar a sus transacciones de confirmación
+Es un paradigma de programación en el que los conceptos delmundo real relevantes para nuestro problema se modelan a través de clases y objetos, y en el que nuestro programa consiste de una serie de interacciones entre estos objetos.
 
-      $ git config --global user.email "[email address]"
+- ★ Clases
+- ★ Objetos
+- ★ Atributos
+- ★ Instancias
+- ★ Herencia
+- ★ [Decoradores](https://realpython.com/primer-on-python-decorators/)
 
-- Establece el nombre que desea adjuntar a sus transacciones de confirmación
-      
-      $ git config --global user.name "[name]"
+## Patrón MTV
 
-## Crear repositorios
+Separa datos, interfaz de usuario y lógica de control:
 
-Al comenzar con un nuevo repositorio localmente, solo necesita hacerlo una vez.
+- ★ **Model** → modelo de datos (`models.py`)
+- ★ **View** → vistas de datos (`views.py`): qué datos se presentan
+- ★ **Template** → plantillas de páginas (generalmente archivos HTML): cómo se presentan los datos
 
-- Convierte un directorio existente en un repositorio git
+## ¿Qué hace Django? ★
 
-      $ git init
+- Provee una estructura de trabajo bajo el patrón **M**odel **T**emplate **V**iew
+- Mapea objetos Python con la base de datos (**ORM**)
+- Permite diseñar URLs amigables para buscadores (útil para **SEO**)
+- Tiene un sistema de plantillas sencillo para diseñadores
+- Genera una interfaz de administración automática
+- Dispone de un framework para manejar formularios
+- Puede gestionar sesiones de usuario, autenticación, caché, almacenamiento, sitemaps, internacionalización, etc.
 
+### Usa lo que quieras, integra lo que necesites
 
-## Hacer cambios
+- Backends de almacenamiento de archivos
+- Backends de cache
+- Backends de autenticación Sitio de administración
+- Sistema de **templates** de Django o uno propio etc.
 
-Examinar e inspeccionar la evolución de los archivos del proyecto.
+## Aplicaciones contrib
 
-- Muestra metadatos y cambios de contenido de la confirmación especificada
-
-      $ git status
-
-- Instantáneas del archivo en preparación para el versionado
-
-      $ git add [archivo]
-
-- Registra confirmaciones de archivos permanentemente en el historial de versiones
-  
-      $ git commit -m "[mensaje descriptivo]"
-
-- Muestra el historial de versiones de la rama actual
-  
-      $ git log
-
-## El archivo .gitgnore
-
-A veces puede ser una buena idea excluir archivos de ser rastreados con Git. Esto normalmente se hace en un archivo especial llamado `.gitignore`. Puede encontrar plantillas útiles para archivos `.gitignore` en [gitignore templates](https://github.com/github/gitignore).
-
-
-## Ramas
-
-Las ramas son una parte importante de trabajar con Git. Cualquier confirmación que realice se realizará en la sucursal a la que está actualmente "desprotegido". Use `git status` para ver qué rama es esa. 
-
-- Crea una nueva rama, sin moverse de la rama actual
-  
-      $ git branch [nombre-rama] 
-
-- Cambia a la rama especificada y actualiza el directorio de trabajo
-  
-      $ git checkout [nombre-rama] 
-
-- Crea una nueva rama, y cambia a la rama especificada. [Los 2 comandos anteriores en 1 solo]
-
-      $ git checkout -b [nombre-rama]
-
+- **auth**: Autenticación de usuarios.
+- **admin**: Sitio de administración **CRUD**.
+- **messages**: Mensajes de aviso para usuarios.
+- **sessions**: Gestión de sesiones.
+- **sites**: Manejar distintos sitios web con un proyecto.
+- **sitemaps**: Generar sitemaps a partir de modelos.
+- **syndication**: Generar feeds RSS y Atom a partir de modelos.
+- **gis**: Trabajar con datos ego espaciales (**PostGIS**)

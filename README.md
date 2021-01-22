@@ -14,9 +14,9 @@
 </p>
 <!-- end banner -->
 
-# AAAIMX Workshop
+# Curso de Django REST Framework
 
-Cillum pariatur anim labore esse consequat occaecat eiusmod ea incididunt id et irure. Id Lorem in do consectetur qui irure est cupidatat in est Lorem. Incididunt aute officia nisi officia excepteur et est reprehenderit. Ut do id enim commodo. Enim aliqua velit quis do. Commodo tempor consequat minim velit occaecat occaecat cupidatat mollit ipsum esse eiusmod. Id do laboris excepteur nostrud.
+Django REST Framework es un conjunto de herramientas potente y flexible para crear API web.
 
 ### Prerequisites 📋
 
