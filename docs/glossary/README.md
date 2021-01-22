@@ -1,0 +1,3 @@
+# Glosario
+
+- **foo**: bar
