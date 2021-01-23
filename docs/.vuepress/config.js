@@ -73,7 +73,14 @@ module.exports = {
         {
           title: 'REST Framework',
           collapsable: false,
-          children: ['']
+          children: [
+            '',
+            'serializers',
+            'viewsets',
+            'security',
+            'db',
+            'advanced'
+          ]
         }
       ]
     }

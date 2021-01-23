@@ -1,62 +1,18 @@
 # REST Framework
 
-https://www.django-rest-framework.org/#installation
+### Arquitectura básica​
 
-- Borseable
+Una API de DRF se compone de 3 capas: el serializador, el conjunto de vistas y el enrutador.​
 
-## JSON Web Tokens
+- **Serializer** → representación de datos (`serializers.py`): convierte los datos del modelo en una representación JSON​
+- **Viewsets** → vistas de datos (`views.py`): lógica de negocio, relativo a la ruta y el método HTTP​
+- **Router** → Endpoints (`urls.py`): ruta del recurso base.
 
-- Simple JWT Tokens
+### Core
 
-## Serializers
+- **decorators**: Autenticación de usuarios.​
+- **permission**: Sitio de administración CRUD.
+- **renderers**: Mensajes de aviso para usuarios.
+- **status**: Gestión de sesiones.
 
-https://www.django-rest-framework.org/api-guide/serializers/
-
-## Viewsets
-
-https://www.django-rest-framework.org/api-guide/viewsets/
-https://pypi.org/project/django-filter/
-
-- Mixins
-- Generic Views
-- Custom actions
-- Params
-- Steps
-
-## API docs
-
-https://www.django-rest-framework.org/api-guide/schemas/
-
-- POSTMAN
-- OpenAPI
-- Swagger
-
-## CORS Headers
-
-https://pypi.org/project/django-cors-headers/
-https://pypi.org/project/django-rest-registration/
-
-## Best practices
-
-https://github.com/rnovec/django-templates
-
-- Estructura
-- Settings
-- Whitenoise
-- Urls
-
-## Deployment
-
-https://pypi.org/project/gunicorn/
-
-## TODO: Bases de datos
-
-- Heroku
-- Addons
-- PostgreSQL
-- Django database URL
-
-## Recursos adicionales
-
-https://github.com/CryceTruly/incomeexpensesapi
-https://www.youtube.com/watch?v=rJWAGQ0JxxI
+## [Instalación](https://www.django-rest-framework.org/#installation)
