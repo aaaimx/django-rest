@@ -1,7 +1,7 @@
 # Bases de datos
 
 - PostgreSQL
-- Django database URL
+- Database URL
 - Raw Queries
 - Modulos Q & F
 - Queries complejas

@@ -8,8 +8,6 @@ https://www.django-rest-framework.org/api-guide/schemas/
 
 ## Best practices
 
-https://github.com/rnovec/django-templates
-
 - Estructura
 - Settings
 - Whitenoise
@@ -22,5 +20,11 @@ https://github.com/rnovec/django-templates
 
 ## Recursos adicionales
 
+https://github.com/rnovec/django-templates
 https://github.com/CryceTruly/incomeexpensesapi
 https://www.youtube.com/watch?v=rJWAGQ0JxxI
+
+- django REST Registration
+- Django social Auth
+- Boto3
+- Celery

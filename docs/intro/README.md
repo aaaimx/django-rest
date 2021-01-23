@@ -6,27 +6,27 @@ Django es un marco web **Python** de alto nivel que fomenta el desarrollo rápid
 
 Es un paradigma de programación en el que los conceptos delmundo real relevantes para nuestro problema se modelan a través de clases y objetos, y en el que nuestro programa consiste de una serie de interacciones entre estos objetos.
 
-- ★ Clases
-- ★ Objetos
-- ★ Atributos
-- ★ Instancias
-- ★ Herencia
-- ★ [Decoradores](https://realpython.com/primer-on-python-decorators/)
+- Clases
+- Objetos
+- Atributos
+- Instancias
+- Herencia
+- [Decoradores](https://realpython.com/primer-on-python-decorators/)
 
 ## Patrón MTV
 
 Separa datos, interfaz de usuario y lógica de control:
 
-- ★ **Model** → modelo de datos (`models.py`)
-- ★ **View** → vistas de datos (`views.py`): qué datos se presentan
-- ★ **Template** → plantillas de páginas (generalmente archivos HTML): cómo se presentan los datos
+- **Model** → modelo de datos (`models.py`)
+- **View** → vistas de datos (`views.py`): qué datos se presentan
+- **Template** → plantillas de páginas (generalmente archivos HTML): cómo se presentan los datos
 
-## ¿Qué hace Django? ★
+## ¿Qué hace Django?
 
 - Provee una estructura de trabajo bajo el patrón **M**odel **T**emplate **V**iew
 - Mapea objetos Python con la base de datos (**ORM**)
 - Permite diseñar URLs amigables para buscadores (útil para **SEO**)
-- Tiene un sistema de plantillas sencillo para diseñadores
+- Tiene un **sistema de plantillas** sencillo para diseñadores
 - Genera una interfaz de administración automática
 - Dispone de un framework para manejar formularios
 - Puede gestionar sesiones de usuario, autenticación, caché, almacenamiento, sitemaps, internacionalización, etc.
@@ -35,7 +35,8 @@ Separa datos, interfaz de usuario y lógica de control:
 
 - Backends de almacenamiento de archivos
 - Backends de cache
-- Backends de autenticación Sitio de administración
+- Backends de autenticación 
+- Sitio de administración
 - Sistema de **templates** de Django o uno propio etc.
 
 ## Aplicaciones contrib
@@ -47,4 +48,4 @@ Separa datos, interfaz de usuario y lógica de control:
 - **sites**: Manejar distintos sitios web con un proyecto.
 - **sitemaps**: Generar sitemaps a partir de modelos.
 - **syndication**: Generar feeds RSS y Atom a partir de modelos.
-- **gis**: Trabajar con datos ego espaciales (**PostGIS**)
+- **gis**: Trabajar con datos geo espaciales (**PostGIS**)

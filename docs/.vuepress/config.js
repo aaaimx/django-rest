@@ -66,7 +66,7 @@ module.exports = {
         {
           title: 'Intro',
           collapsable: false,
-          children: ['', '2-projects']
+          children: ['', '2-projects', 'auth']
         }
       ],
       '/rest-framework/': [
