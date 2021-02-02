@@ -52,10 +52,10 @@ module.exports = {
         text: 'REST Framework',
         link: '/rest-framework/'
       },
-      {
-        text: 'Storages',
-        link: '/storages/'
-      },
+      // {
+      //   text: 'Storages',
+      //   link: '/storages/'
+      // },
       {
         text: 'Glosario',
         link: '/glossary/'
@@ -66,7 +66,7 @@ module.exports = {
         {
           title: 'Intro',
           collapsable: false,
-          children: ['', '2-projects', 'auth']
+          children: ['', 'projects', 'models', 'auth']
         }
       ],
       '/rest-framework/': [

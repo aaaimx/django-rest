@@ -1,6 +1,6 @@
 # REST Framework
 
-### Arquitectura básica​
+## Arquitectura básica​
 
 Una API de DRF se compone de 3 capas: el serializador, el conjunto de vistas y el enrutador.​
 
@@ -8,7 +8,7 @@ Una API de DRF se compone de 3 capas: el serializador, el conjunto de vistas y e
 - **Viewsets** → vistas de datos (`views.py`): lógica de negocio, relativo a la ruta y el método HTTP​
 - **Router** → Endpoints (`urls.py`): ruta del recurso base.
 
-### Core
+## Core
 
 - **decorators**: Autenticación de usuarios.​
 - **permission**: Sitio de administración CRUD.

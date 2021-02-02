@@ -1,6 +1,15 @@
 # Glosario
 
+## Django
+
 - Model:
+- Migration:
+- ORM:
+- CRUD:
+- QuerySet:
+
+## Django REST Framework
+
 - Serializer:
 - Viewset:
 - Mixin:

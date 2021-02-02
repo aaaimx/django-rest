@@ -1,4 +1,17 @@
-```py
+# Autenticación
+
+There are four steps for adding a custom user model to our project:
+
+1. Create a CustomUser model
+2. Update config/settings.py
+3. Customize UserCreationForm and UserChangeForm
+4. Add the custom user model to admin.py
+
+## Base User Manager
+
+`myapp/managers.py`
+
+```python
 from django.contrib.auth.base_user import BaseUserManager
 
 class UserManager(BaseUserManager):
@@ -30,19 +43,25 @@ class UserManager(BaseUserManager):
         return self._create_user(email, password, **extra_fields)
 ```
 
-```py
-from __future__ import unicode_literals
+## Custom User Model
 
+`myapp/models.py`
+
+```py
 from django.db import models
 from django.core.mail import send_mail
-from django.contrib.auth.models import PermissionsMixin
+from django.contrib.auth.models import AbstractUser, PermissionsMixin
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.utils.translation import ugettext_lazy as _
 
 from .managers import UserManager
 
+# simple way
+class CustomUser(AbstractUser):
+    pass
 
-class User(AbstractBaseUser, PermissionsMixin):
+# Advanced way
+class CustomUser(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(_('username'), max_length=10, unique=True)
     email = models.EmailField(_('email address'), unique=True)
     first_name = models.CharField(_('first name'), max_length=30, blank=True)
@@ -78,4 +97,49 @@ class User(AbstractBaseUser, PermissionsMixin):
         Sends an email to this User.
         '''
         send_mail(subject, message, from_email, [self.email], **kwargs)
+```
+
+`settings.py`
+
+```py
+AUTH_USER_MODEL = 'myapp.CustomUser' # new
+```
+
+```py
+# accounts/forms.py
+from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+
+class CustomUserCreationForm(UserCreationForm):
+
+    class Meta:
+        model = get_user_model()
+        fields = ('email', 'username',)
+
+
+class CustomUserChangeForm(UserChangeForm):
+
+    class Meta:
+        model = get_user_model()
+        fields = ('email', 'username',)
+```
+
+## Admin
+
+```py
+# accounts/admin.py
+from django.contrib import admin
+from django.contrib.auth import get_user_model
+from django.contrib.auth.admin import UserAdmin
+from .forms import CustomUserCreationForm, CustomUserChangeForm
+
+CustomUser = get_user_model()
+
+class CustomUserAdmin(UserAdmin):
+    add_form = CustomUserCreationForm
+    form = CustomUserChangeForm
+    model = CustomUser
+    list_display = ['email', 'username',]
+
+admin.site.register(CustomUser, CustomUserAdmin)
 ```
