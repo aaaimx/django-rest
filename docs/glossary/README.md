@@ -10,9 +10,12 @@
 
 ## Django REST Framework
 
-- Serializer:
-- Viewset:
-- Mixin:
+- Serializers:
+- Viewsets:
+- Mixins:
+
+## RESTful
+
 - JSON:
 - Headers:
   - Content-Type:
@@ -39,6 +42,9 @@
   - DELETE
   - HEAD
   - OPTIONS
+
+## Otros conceptos
+
 - JWT
   - Definition
   - HS254

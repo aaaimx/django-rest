@@ -78,8 +78,8 @@ module.exports = {
             'serializers',
             'viewsets',
             'security',
-            'db',
-            'advanced'
+            // 'db',
+            // 'advanced'
           ]
         }
       ]
