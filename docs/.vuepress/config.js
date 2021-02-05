@@ -57,6 +57,10 @@ module.exports = {
       //   link: '/storages/'
       // },
       {
+        text: 'Proyecto',
+        link: '/project/'
+      },
+      {
         text: 'Glosario',
         link: '/glossary/'
       }
@@ -78,7 +82,7 @@ module.exports = {
             'serializers',
             'viewsets',
             'security',
-            // 'db',
+            'testing',
             // 'advanced'
           ]
         }

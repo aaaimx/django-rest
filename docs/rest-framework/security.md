@@ -24,6 +24,8 @@ class BasePermission(BasePermission):
 
 ## [Simple JWT Tokens](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html)
 
+    $ pip install djangorestframework-simplejwt
+
 ```py
 import datetime
 
@@ -43,11 +45,29 @@ SIMPLE_JWT = {
 }
 ```
 
+```py
+# urls.py
+from rest_framework_simplejwt.views import TokenObtainPairView
+
+urlpatterns = [
+    ...
+    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    ...
+]
+
+```
+
 ## [CORS Headers](https://pypi.org/project/django-cors-headers/)
 
     $ pip install django-cors-headers
 
 ```py
+
+THIRD_PARTY_APPS = (
+    ...
+    'corsheaders',
+    ...
+)
 
 MIDDLEWARE = [
     ...
